@@ -104,4 +104,60 @@ Main.java:10: error: call to super must be first statement in constructor
 error: compilation failed
 ```
 
+# Conclusion
+
+The StatementBeforeSuper is a great feature to avoid to create new auxiliary methods.
+
+For exemple, if you want to test or verify any data, variable, etc.. before the super(),
+on Java 21 for example, it's not possible, so you need to create an auxiliary method.
+
+Let's show the difference between Java21 and Java23:
+
+### Java 23
+
+```
+class Animal {
+    Animal(String name) {
+        System.out.println("Animal criado: " + name);
+    }
+}
+
+class Dog extends Animal {
+    Dog(String name) {
+        if (name == null || name.isBlank()) {
+            name = "Desconhecido"; 
+        }
+        super(name); 
+    }
+}
+
+```
+So, in this case, was created a conditional if to validate the name. This can't be done by Java 21
+
+### How the same code works on Java 21
+
+```
+class Animal {
+    Animal(String name) {
+        System.out.println("Animal criado: " + name);
+    }
+}
+
+class Dog extends Animal {
+    Dog(String name) {
+        super(validateName(name)); 
+    }
+
+    private static String validateName(String name) {
+        if (name == null || name.isBlank()) {
+            return "Desconhecido";
+        }
+        return name;
+    }
+}
+```
+
+
+
+
 
