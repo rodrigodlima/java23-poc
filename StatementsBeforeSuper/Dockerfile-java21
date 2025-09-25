@@ -1,0 +1,8 @@
+FROM openjdk:21
+LABEL authors="Rodrigo de Lima Silva"
+
+WORKDIR /app
+COPY src/Main.java .
+
+#ENTRYPOINT ["java", "--enable-preview", "--source", "Main.java"]
+ENTRYPOINT ["java", "Main.java"]

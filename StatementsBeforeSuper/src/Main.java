@@ -7,7 +7,7 @@ class Animal {
 class Dog extends Animal {
     Dog(String name) {
         System.out.println("Preparing...");
-        super(name); // agora permitido após uma instrução
+        super(name); // now it's permitted after an instruction
     }
 }
 
