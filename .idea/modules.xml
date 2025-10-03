@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PrimitiveTypesInPatterns/PrimitiveTypesInPatterns.iml" filepath="$PROJECT_DIR$/PrimitiveTypesInPatterns/PrimitiveTypesInPatterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StatementsBeforeSuper/StatementsBeforeSuper.iml" filepath="$PROJECT_DIR$/StatementsBeforeSuper/StatementsBeforeSuper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/java23-poc.iml" filepath="$PROJECT_DIR$/.idea/java23-poc.iml" />
+    </modules>
+  </component>
+</project>
